@@ -1,0 +1,30 @@
+<%= form_with model: @entity, url:group_entitys_path do |form| %>
+  <% if @entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+      <ul>
+        <% @entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="p-2">
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+  </div>
+
+  <div class="p-2">
+    <%= form.number_field :amount, class: 'form-control', placeholder: 'Amount ', required: true  %>
+  </div>
+
+  <div class="select-field">
+    <%= form.label :group_id, 'Category',class:"pe-1 fw-semibold fs-4 text-secondary" %>
+    <%= form.collection_select :group_id, current_user.groups, :id, :name ,class:"p-1 fw-semibold" %>
+  </div>
+
+  <div class="text-light footer d-flex justify-content-center p-3">
+    <%= form.submit 'Create transaction', class: 'button btn p-2' %>
+  </div>
+<% end %>
