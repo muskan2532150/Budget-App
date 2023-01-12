@@ -78,3 +78,4 @@ end
 
 gem 'bootstrap', '~> 5.2.2'
 gem 'devise'
+gem 'petergate'

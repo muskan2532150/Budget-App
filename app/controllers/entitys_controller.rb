@@ -1,5 +1,6 @@
 class EntitysController < ApplicationController
-    def index
+  access user: :all, admin: :all
+  def index
         @group = Group.find(params[:group_id])
         @entitys = Entity.where(group_id: @group.id, user_id: current_user.id)
       end
