@@ -2,12 +2,9 @@
   <% if @entity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
-
-      <ul>
         <% @entity.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <h5 class="text-center text-secondary"><%= error.full_message %></h5>
         <% end %>
-      </ul>
     </div>
   <% end %>
 
