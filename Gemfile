@@ -71,5 +71,10 @@ group :test do
   gem "webdrivers"
 end
 
+# Run against this stable release
+group :development, :test do
+  gem 'rspec-rails', '~> 6.0.0'
+end
+
 gem 'bootstrap', '~> 5.2.2'
 gem 'devise'
