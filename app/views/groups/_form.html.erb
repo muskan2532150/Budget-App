@@ -1,0 +1,19 @@
+<div class="container">
+ <%= form_with(model: group) do |form| %>
+    <% if @group.errors.any? %>
+        <% @group.errors.full_messages.each do |message|%>
+            <h5 class="text-center text-secondary"><%= message %> </h5>
+        <%end%>
+    <%end%>
+    <div class="p-2">
+     <%= form.text_field :name , class: 'form-control', placeholder:"Name" %>
+    </div>
+    <div class="p-2">
+     <%= form.text_field :icon , class: 'form-control', placeholder:"Icon link"%>
+    </div>
+    <div class="text-light footer d-flex justify-content-center p-3">
+     <%= form.submit "Create Group", class: 'button btn' %>
+    </div>
+
+ <% end %>
+</div>
