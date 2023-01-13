@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-    <p>Welcome, <%= current_user.name %></p>
-    <em>You are signed in!</em>
-    <%=yield%>
+<p style="color: green"><%= notice %></p>
+ 
+    <%=render 'shared/groupindex' ,groups:@groups%>
 <% else %>
     <div class="container-fluid text-center">
      <div class="position-absolute top-50 start-50 translate-middle w-50">

@@ -13,8 +13,8 @@
   <body>
   <% if user_signed_in? %>
     <%= render 'shared/navbar' %>
+        <%= yield %>
+    <%=render 'shared/footer'%>
   <% end %>
-
-    <%= yield %>
   </body>
 </html>
