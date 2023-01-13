@@ -77,5 +77,6 @@ group :development, :test do
 end
 
 gem 'bootstrap', '~> 5.2.2'
+gem 'bullet', group: 'development'
 gem 'devise'
 gem 'petergate'
