@@ -13,28 +13,28 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
- @import "color";
+@import "bootstrap";
+@import "color";
 
- img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-  }
- 
- a {
-   color: $medium-text;
- }
+img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
 
- .button {
-    background-color: $second;
-    color: $second-background;
-  }
+a {
+  color: $medium-text;
+}
 
-  .button:hover{
-    color: $second;
-  }
+.button {
+  background-color: $second;
+  color: $second-background;
+}
 
-  .background{
-    background-color:$dark-main ;
-  }
+.button:hover {
+  color: $second;
+}
+
+.background {
+  background-color: $dark-main;
+}
