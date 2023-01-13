@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg background">
+  <div class="container">
+        <%=link_to 'Bk' ,:back, class: "text-decoration-none fs-2 text-dark" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+        <li class="nav-item me-4">
+          <%=link_to 'Category' , groups_path, class: "text-decoration-none text-dark fs-5"%>
+        </li>
+        <li class="nav-item ms-4">
+          <%=render 'shared/login'%>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
