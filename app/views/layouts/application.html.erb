@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Budget</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <% if user_signed_in? %>
+    <%= render 'shared/navbar' %>
+  <% end %>
+  <%= yield %>
+    <% if user_signed_in? %>
+      <%=render 'shared/footer'%>
+  <% end %>
+  </body>
+</html>

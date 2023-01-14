@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+       <div class="container d-flex flex-column ">
+         <p class="text-center">Welcome, <%= current_user.name %></p>
+        <p class="text-center">You are signed in!</p>
+        <%= link_to 'Go to categories', groups_path,  method: :get,  class: 'btn btn-primary  w-75 mt-5 ms-5' %>
+        <%= button_to "Log out", destroy_user_session_path, class: "btn btn-primary  w-75 mt-2 ms-5" ,method: :delete %>
+       </div>
+<% else %>
+    <div class="container-fluid text-center">
+     <div class="position-absolute top-50 start-50 translate-middle w-50">
+       <h1 >Bk Library</h1>
+       <div class="d-flex flex-column ms-5">
+           <%= link_to  'Log in', user_session_path, class: 'btn btn-primary w-75 mt-5' %>
+           <%= link_to  'Sign Up', new_user_registration_path, method: :get, class: 'btn btn-success w-75 mt-3' %>
+       </div>
+     </div>
+    </div>
+<%end%>

@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+<div class="w-50 m-auto">
+  <h1 class="text-center">Entities</h1>
+  <ul class="container  list-unstyled">
+  <%=render 'groups/group', group:@group%>
+  </ul>
+
+<% if @entitys.empty? %>
+  <h4 class="text-center text-secondary">There are not transactions yet!</h4>
+  <p class="text-center text-secondary">Create a transaction for this category by clicking on the button below.</p>
+<% else %>
+  <ul class="container custom-container">
+    <% @entitys.each do |entity| %>
+      <li class="d-flex justify-content-between border bg-light p-1 mt-3 list-unstyled">
+        <div class="px-2 d-flex flex-column">
+          <h5><%= entity.name %></h5>
+          <p class="fs-6"><%= @group.created_at.strftime("%d %h %Y")%> at <%= @group.created_at.strftime("%l.%M%P")%></p>
+        </div>
+        <div class="px-2 fw-semibold fs-6 text-secondary ">
+          <span class="">$<%= entity.amount %></span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="text-light footer d-flex justify-content-center container p-2">
+  <%= button_to 'New Transaction', new_group_entity_path(group_id: @group.id), method: :get, class: 'btn button p-2' %>
+</div>
+</div>
