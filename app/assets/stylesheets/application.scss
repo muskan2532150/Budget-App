@@ -43,3 +43,9 @@ a {
 .background {
   background-color: $dark-main;
 }
+
+@include media-breakpoint-up(md) {
+  .custom-width {
+    width: 50%;
+  }
+}
