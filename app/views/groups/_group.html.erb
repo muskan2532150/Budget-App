@@ -1,6 +1,6 @@
 <li class="groups-list-item">
-    <div class="border mb-1 p-4 mt-5">
-        <div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-between border mb-1 p-2 mt-3">
+        <div class="d-flex justify-content-start">
             <div class="">
               <img src="<%= group.icon %>" alt="Category icon image" class="rounded">
             </div>
@@ -9,7 +9,7 @@
               <p><%= group.created_at.strftime("%d %h %Y") %></p>
             </div>
         </div>
-        <div class="px-5 d-flex justify-content-between fw-semibold fs-6 text-secondary ">
+        <div class="px-2 d-flex justify-content-between fw-semibold fs-6 text-secondary ">
             <% total = 0.00 %>
             <% group.entities.each {|entity| total += entity.amount} %>
             <span class="amount">Total Amount: $</span>

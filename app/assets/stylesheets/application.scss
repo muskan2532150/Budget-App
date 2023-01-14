@@ -35,6 +35,11 @@ a {
   color: $second;
 }
 
+.custom-container{
+  height: 12rem;
+  overflow-y: scroll;
+}
+
 .background {
   background-color: $dark-main;
 }
